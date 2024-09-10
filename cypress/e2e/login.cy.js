@@ -79,7 +79,7 @@ describe('My test cases orangeHRM', () => {
         //Assert the firstName of the Employee is showing...........
         cy.get("div[role='cell'] div").contains(firstName).invoke('text')
           .then((text) => {
-            const expectedText = text.replace(/\s+/g, ' ').trim(); // Collapse multiple spaces into one and trim
+            const expectedText = text.replace(/\s+/g, ' ').trim(); 
             expect(expectedText).to.eq(firstName);
           });
       })
@@ -93,14 +93,11 @@ describe('My test cases orangeHRM', () => {
       cy.get('.oxd-autocomplete-option > span').click()
       // Click on Search
       cy.get("button[type='submit']").click()
-      // Assert employee name after searching the employee in the Directory
-      // Will fail due to extra spaces in the name, need to trim it.
-      // cy.get(".orangehrm-directory-card-header").should("have.text",firstName + " " + lastName)
 
       cy.get(".orangehrm-directory-card-header")
         .invoke('text')
         .then((text) => {
-          const normalizedText = text.replace(/\s+/g, ' ').trim(); // Collapse multiple spaces into one and trim
+          const normalizedText = text.replace(/\s+/g, ' ').trim(); 
           expect(normalizedText).to.eq(fullName);
         });
 
