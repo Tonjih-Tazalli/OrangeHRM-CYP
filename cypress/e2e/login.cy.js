@@ -131,7 +131,7 @@ describe('My test cases orangeHRM', () => {
         cy.get('.oxd-text--toast-message').should("have.text", "Successfully Saved")
       })
 
-      //// log out as user.
+      //// log out as user........
 
       // cy.get("span img").click()
       // cy.get("li a").contains("Logout").click()
