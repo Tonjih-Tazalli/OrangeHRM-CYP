@@ -52,7 +52,7 @@ describe('My test cases orangeHRM', () => {
       cy.get("input[name='lastName']").type(lastName)
       // Click On Create Login Details toggle
       cy.get("input[type='checkbox']").click({ force: true })
-      // Fill the login details form.
+      // Fill the login details form...
       cy.get('label').contains("Username").parent().siblings('div').find('input').type(username)
       cy.get('label').contains("Password").parent().siblings('div').find('input').type(password)
       cy.get('label').contains("Confirm Password").parent().siblings('div').find('input').type(password)
