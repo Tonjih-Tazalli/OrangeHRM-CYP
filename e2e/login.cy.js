@@ -118,7 +118,7 @@ describe('My test cases orangeHRM', () => {
         cy.get("[type='submit']").click()
         // Assert that the Newly Created Employee Full Name is showing beside the profile icon.
         cy.get("p.oxd-userdropdown-name").should("have.text", fullName)
-        // Navigate to My Info
+        // Navigate to My Info test111
         cy.get("span").contains("My Info").click()
         
         cy.scrollTo(0, 600); 
@@ -135,6 +135,9 @@ describe('My test cases orangeHRM', () => {
 
       //// log out as user
 
+      // cy.get("span img").click()
+      // cy.get("li a").contains("Logout").click()
+
       cy.get("span img").click()
       cy.get("li a").contains("Logout").click()
 
@@ -142,8 +145,9 @@ describe('My test cases orangeHRM', () => {
 
 
 
+
     }) //end of employee id
 
-    ///////////////
+    //////////////
   })
 })
